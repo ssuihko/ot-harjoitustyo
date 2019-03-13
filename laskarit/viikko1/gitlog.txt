@@ -1,0 +1,115 @@
+sahsuihk@lx8-fuxi154:~/ot_viikko1/tiedostoja$ git log --stat| cat
+commit 273a48bedf78c96ca817119e538f104f98e8e1b5
+Author: Sini Suihkonen <sahsuihkonen@gmail.com>
+Date:   Wed Mar 13 14:54:52 2019 +0200
+
+    vielä muutoksia
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit bfafd42e5f4b1588f9f530f21c9828e72b224ad5
+Author: Sini Suihkonen <sahsuihkonen@gmail.com>
+Date:   Wed Mar 13 14:50:57 2019 +0200
+
+    uusi hakemisto
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit a924762eac4328e5e9c2f54d17a461cfd35b5ebd
+Author: Sini Suihkonen <sahsuihkonen@gmail.com>
+Date:   Wed Mar 13 14:44:36 2019 +0200
+
+    lisää muutoksia
+
+ eka.txt    | 29 +----------------------------
+ kolmas.txt |  2 +-
+ 2 files changed, 2 insertions(+), 29 deletions(-)
+
+commit 3a456280218d05984636a6a065aba75c3f2f5113
+Author: Sini Suihkonen <sahsuihkonen@gmail.com>
+Date:   Wed Mar 13 14:41:40 2019 +0200
+
+    uudelleennimentä
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit e4af59f5733f439d0b2a6df3325f89189390c907
+Author: Sini Suihkonen <sahsuihkonen@gmail.com>
+Date:   Wed Mar 13 14:40:29 2019 +0200
+
+    tiedoston poisto
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit aa15569610f6c24eb3578c6d19cb5ce27683c931
+Author: Sini Suihkonen <sahsuihkonen@gmail.com>
+Date:   Wed Mar 13 14:36:53 2019 +0200
+
+    muokattu tiedosto.txt
+
+ tiedosto.txt | 13 +------------
+ 1 file changed, 1 insertion(+), 12 deletions(-)
+
+commit c1ef3cfc5e2daace1cf18c0d00dec324029b10eb
+Author: Sini Suihkonen <sahsuihkonen@gmail.com>
+Date:   Wed Mar 13 14:34:34 2019 +0200
+
+    paljon tekstiä
+
+ tiedosto.txt | 655 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 655 insertions(+)
+
+commit 7533071a53b289fab36c3053d15671045b2c36f9
+Author: Sini Suihkonen <sahsuihkonen@gmail.com>
+Date:   Wed Mar 13 14:20:52 2019 +0200
+
+    asiaa.txt lisätty
+
+ stuff/asiaa.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 29a00ef40019bd8ec4be5c80d219cd14973d8164
+Author: Sini Suihkonen <sahsuihkonen@gmail.com>
+Date:   Wed Mar 13 14:19:32 2019 +0200
+
+    muokatut toinen ja kolmas tiedosto
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 898ab9e30766677375a09f69afb082e871c644d6
+Author: Sini Suihkonen <sahsuihkonen@gmail.com>
+Date:   Wed Mar 13 14:17:19 2019 +0200
+
+    kolmas tiedosto
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 97f138231e950844c9b9386885d2d710c6b56481
+Author: Sini Suihkonen <sahsuihkonen@gmail.com>
+Date:   Wed Mar 13 14:15:26 2019 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 46bfe8c219b89db8471c57aab75488fa211e3ab3
+Author: Sini Suihkonen <sahsuihkonen@gmail.com>
+Date:   Wed Mar 13 14:12:27 2019 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
