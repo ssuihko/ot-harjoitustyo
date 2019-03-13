@@ -13,3 +13,4 @@ _I **can** combine bold_ and **italic**
 
 [komentorivi.txt](https://github.com/ssuihko/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
 
+This change will cause a merge conflict
