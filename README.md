@@ -2,11 +2,12 @@
 *This is in italic*
 [here's a link to Google](http://google.com)
 
+_I **can** combine bold_ and **italic**
+
+
 # Ohjelmistotekniikka, harjoitustyö
 ## Tehtävät
 ### Viikko 1
-
-_I **can** combine bold_ and **italic**
 
 [gitlog.txt](https://github.com/ssuihko/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
 
