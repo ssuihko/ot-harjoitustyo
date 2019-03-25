@@ -1,10 +1,16 @@
 # Vaatimusmäärittely
 
 ## Sovelluksen tarkoitus
-Sovellus on miinaharavapeli, johon integroidaan pelin lisäksi pelaajien highscore listaus
-
-## Käyttäjät
+Sovellus on miinaharavapeli, johon integroidaan pelin lisäksi pelaajien highscore listaus. Kaikki sovelluksen käyttäjät ovat pelaajia, jotka valitsevat itselleen peli-aliaksen, jonka mukaan heidät voidaan järjestää highscore -taulussa.
 
 ## Perusversion tarjoama toiminnallisuus
+- pelaaja voi avata miinaharava -sovelluksen
+- pelaaja voi luoda itselleen peli-aliaksen
+- pelaaja voi nähdä miinaharava -taulun
+- pelaaja voi pelata miinaharavaa ja nähdä pisteensä pelin päätyttyä
+- pelaaja voi nähdä oman sijoituksensa highscore -taulun lisäksi, jos hän ei päässyt top 5
+- pelaaja voi lopettaa pelin 
 
 ## Jatkokehitysideoita
+- pelaaja voi valita vaikeusasteen 10, 40 ja 99 miinan välillä
+- pelaaja voi kustomoida itselleen miinaharavakentän
