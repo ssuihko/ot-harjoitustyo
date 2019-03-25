@@ -1,9 +1,10 @@
-## Vaatimusmäärittely
+# Vaatimusmäärittely
 
-### Sovelluksen tarkoitus
+## Sovelluksen tarkoitus
+Sovellus on miinaharavapeli, johon integroidaan pelin lisäksi pelaajien highscore listaus
 
-### Käyttäjät
+## Käyttäjät
 
-### Perusversion tarjoama toiminnallisuus
+## Perusversion tarjoama toiminnallisuus
 
-### Jatkokehitysideoita
+## Jatkokehitysideoita
