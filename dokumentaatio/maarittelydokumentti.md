@@ -1,3 +1,9 @@
-# Vaatimusmäärittely
+## Vaatimusmäärittely
 
-## Sovelluksen tarkoitus
+### Sovelluksen tarkoitus
+
+### Käyttäjät
+
+### Perusversion tarjoama toiminnallisuus
+
+### Jatkokehitysideoita
