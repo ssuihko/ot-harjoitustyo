@@ -9,7 +9,7 @@ Sovellus on miinaharavapeli, johon integroidaan pelin lisäksi pelaajien highsco
 - pelaaja voi luoda itselleen peli-aliaksen
 - pelaaja voi nähdä miinaharava -taulun
 - pelaaja voi pelata miinaharavaa ja nähdä pisteensä pelin päätyttyä
-- pisteet perustuvat kuluneeseen aikaan ja jäljelle jääneiden miinojen määrään
+- pisteet perustuvat kuluneeseen aikaan, kentän kokoon ja miinojen määrään
 - pelaaja voi nähdä oman sijoituksensa highscore -taulun lisäksi, jos hän ei päässyt top 5
 - pelaaja voi lopettaa pelin 
 - pelaaja voi aloittaa uuden pelin
