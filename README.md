@@ -9,3 +9,7 @@ Sovellus on miinaharavapeli. Sovellus ei vaadi varsinaista rekisteröitymistä, 
 
 [työaikakirjanpito](https://github.com/ssuihko/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
 
+[alustava rakenne](https://github.com/ssuihko/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+
+
+
