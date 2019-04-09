@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-import application.Alias;
+import domain.Alias;
 import dao.AliasDao;
 import java.io.File;
 import java.io.FileWriter;
@@ -16,25 +16,28 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.rules.TemporaryFolder;
+import dao.FileAliasDao;
+import org.junit.Rule;
 
 public class FileAliasDaoTest {
 
-   // @Rule
-    public TemporaryFolder testFolder = new TemporaryFolder();
+   @Rule 
+   public TemporaryFolder testFolder = new TemporaryFolder();
 
     File aliasFile;
     AliasDao dao;
 
-   // @Before
-    //public static void setUp() throws Exception {
-  //      aliasFile = testFolder.newFile("testfile_users.txt");
+   @Before
+    public void setUp() throws Exception {
+        
+        aliasFile = testFolder.newFile("testfile_users.txt");
 
-    //    try (FileWriter file = new FileWriter(aliasFile.getAbsolutePath())) {
-     //       file.write("testertester;Teppo Testaaja\n");
-      //  }
+        try (FileWriter file = new FileWriter(aliasFile.getAbsolutePath())) {
+            file.write("testertester;Teppo Testaaja\n");
+        }
 
-      //  dao = new FileAliasDao(aliasFile.getAbsolutePath());
-    //}
+        dao = new FileAliasDao(aliasFile.getAbsolutePath());
+    }
     @Test
     public void usersAreReadCorrectlyFromFile() {
         List<Alias> aliases = dao.getAll();

@@ -2,7 +2,7 @@
 package dao;
 
 import java.util.List;
-import application.Alias;
+import domain.Alias;
 
 public interface AliasDao {
     

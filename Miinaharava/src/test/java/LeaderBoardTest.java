@@ -15,9 +15,9 @@ import static org.junit.Assert.*;
  *
  * @author sahsuihk
  */
-public class TileTest {
+public class LeaderBoardTest {
     
-    public TileTest() {
+    public LeaderBoardTest() {
     }
     
     @BeforeClass

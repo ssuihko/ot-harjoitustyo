@@ -30,7 +30,7 @@ public class Tile extends StackPane {
         this.y = y;
         this.hasBomb = hasBomb;
         
-        if(hasBomb) {
+        if (hasBomb) {
             Main.numBombs++;
         }
         
@@ -46,59 +46,53 @@ public class Tile extends StackPane {
         setTranslateX(x * 40);
         setTranslateY(y * 40);
     }
-    private void Clicked(MouseEvent event) {
-        
-        if(event.getButton() == MouseButton.PRIMARY) {
-            
-            //Left button
-            if(!flagged) {
+    private void Clicked(MouseEvent event) { 
+        if (event.getButton() == MouseButton.PRIMARY) {
+            if (!flagged) {
                 button.setBackground(null);
                 button.setDisable(true);
                 active = false;
                 
-                if(hasBomb) {
+                if (hasBomb) {
                     Main.gameOver();
                 } else {
-                    if(this.numBombs == 0) {
+                    if (this.numBombs == 0) {
                         Blank(this);
                     } else {
                         button.setText(Integer.toString(numBombs));
                         button.setTextFill(color);
                     }
                 }
-                
             }
-            //right button
         } else {
-            if(!flagged) {
+            if (!flagged) {
                 
                 flagged = true;
-                if(this.hasBomb) {
+                if (this.hasBomb) {
                     Main.foundBombs++;
                     button.setText("F");
-                    if(Main.foundBombs == Main.numBombs) {
+                    if (Main.foundBombs == Main.numBombs) {
                         Main.win();
                     }
                 }
             } else {
-                if(hasBomb) {
+                if (hasBomb) {
                     Main.foundBombs--;
                 }
                 button.setGraphic(null);
                 flagged = false;
             }
         }
-        
     }
     private void Blank(Tile tile) {
-        for(int i = 0; i < tile.neighbours.size(); i++) {
-            if(tile.neighbours.get(i).active) {
+        for (int i = 0; i < tile.neighbours.size(); i++) {
+            if (tile.neighbours.get(i).active) {
                 tile.neighbours.get(i).button.setDisable(true);
                 tile.neighbours.get(i).button.setGraphic(null);
                 tile.neighbours.get(i).button.setText(Integer.toString(tile.neighbours.get(i).numBombs));
                 tile.neighbours.get(i).button.setTextFill(tile.neighbours.get(i).color);
                 tile.neighbours.get(i).active = false;
-                if(tile.neighbours.get(i).numBombs == 0) {
+                if (tile.neighbours.get(i).numBombs == 0) {
                     Blank(tile.neighbours.get(i));
                 }
             }

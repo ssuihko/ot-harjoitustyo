@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Alert.AlertType; 
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
@@ -23,10 +23,10 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import dao.AliasDao;
+import domain.Alias;
 import dao.FileAliasDao;
 import java.util.Properties;
 import java.io.FileInputStream;
@@ -42,7 +42,7 @@ public class Main extends Application {
 
     private static int bombProcent = 10;
     private static int gridSize = 10;
-    private static Tile[][] grid;
+    private static Tile[][] grid; 
     public static Timer clock;
     private static VBox vbox = new VBox();
 
@@ -133,9 +133,9 @@ public class Main extends Application {
         menuDifficulty.getItems().addAll(easy, medium, hard);
 
         Menu menuAlias = new Menu("Leaderboard");
-        MenuItem me = new MenuItem("My best scores");
-        MenuItem all = new MenuItem("Best Of All");
-        menuAlias.getItems().addAll(me, all);
+        MenuItem me = new MenuItem("Best scores");
+        
+        menuAlias.getItems().addAll(me);
 
         menu.getMenus().addAll(menuSize, menuDifficulty, menuAlias);
 

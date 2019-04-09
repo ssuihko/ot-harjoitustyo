@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-import application.Alias;
+import domain.Alias;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -13,11 +13,25 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class AliasTest {
-    
+
     @Test
     public void nonEqualWhenDifferentType() {
         Alias a = new Alias("tester");
         Object o = new Object();
         assertFalse(a.equals(o));
+    }
+
+    @Test
+    public void equalWhenSameAlias() {
+        Alias aa = new Alias("aslan");
+        Alias bb = new Alias("aslan");
+        assertTrue(aa.equals(bb));
+    }
+
+    @Test
+    public void notEqualWhenNotSameAlias() {
+        Alias aa = new Alias("aslan");
+        Alias bb = new Alias("simba");
+        assertFalse(aa.equals(bb));
     }
 }
