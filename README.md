@@ -11,5 +11,23 @@ Sovellus on miinaharavapeli. Sovellus ei vaadi varsinaista rekisteröitymistä, 
 
 [alustava rakenne](https://github.com/ssuihko/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 
+## Komentorivikomennot
+
+### Testaus
+
+
+Testit suoritetaan komennolla
+
+```
+mvn test
+```
+
+Testikattavuusraportti luodaan komennolla
+
+```
+mvn jacoco:report
+```
+Kattavuusraporttia voi tarkastella avaamalla selaimella tiedosto _target/site/jacoco/index.html_
+
 
 
