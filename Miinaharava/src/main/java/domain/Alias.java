@@ -12,8 +12,9 @@ public class Alias {
         return username;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public String setUsername(String username) {
+        return this.username = username;
+        
     }
 
     @Override

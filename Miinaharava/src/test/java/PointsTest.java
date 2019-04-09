@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -10,35 +5,29 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import domain.Alias;
+import domain.Points;
 
-/**
- *
- * @author sahsuihk
- */
 public class PointsTest {
-    
-    public PointsTest() {
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
 
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
+    Alias alias = new Alias("Alex");
+    Points o = new Points(alias, 30);
+    Alias nimi = new Alias("Nala");
+    Points p = new Points(nimi, 25);
+
+    @Test
+    public void addingPointsWorks() {
+        o.setTime(100);
+        assertEquals(100, o.getTime());
+
+    }
+    @Test
+    public void addingPointsIfFalse() {
+        o.setTime(19);
+        assertFalse(o.getTime() != 19);
+    }
+    @Test
+    public void sameAliasFalse() {
+        assertFalse(o.getAlias().equals(p.getAlias()));
+    }
 }

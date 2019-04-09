@@ -34,4 +34,13 @@ public class AliasTest {
         Alias bb = new Alias("simba");
         assertFalse(aa.equals(bb));
     }
+    @Test
+    public void setUserNameWorks() {
+        Alias a = new Alias("newnew");
+        String name = "newnewnew";
+        a.setUsername(name);
+        assertEquals("newnewnew", a.getUsername());
+        
+        
+    }
 }

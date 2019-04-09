@@ -1,39 +1,27 @@
 package domain;
 
-import application.Main;
 import java.util.HashMap;
 
 public class Points {
 
     private Alias alias;
-    private int points;
-    private HashMap<Alias, Integer> board;
+    private int time;
 
-    public Points(Alias alias, int points) {
+    public Points(Alias alias, int time) {
         this.alias = alias;
-        this.points = points;
-        this.board = board;
-
+        this.time = time;
     }
 
     public Alias getAlias() {
         return alias;
     }
 
-    public int getPoints() {
-        return points;
+    public int getTime() {
+        return time;
     }
 
-    public void setAlias(Alias alias) {
-        this.alias = alias;
+    public void setTime(int time) {
+        this.time = time;
     }
-
-    public void setPoints(int points) {
-        this.points = points;
-    }
-
-    public Alias fetchTop5() {
-        return null;
-
-    }
+   
 }

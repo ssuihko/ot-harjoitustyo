@@ -247,8 +247,8 @@ public class Main extends Application {
 
         Alert gameOver = new Alert(AlertType.INFORMATION);
         gameOver.setTitle("Game Over!");
-        gameOver.setHeaderText("Bomb Explosion");
-        gameOver.setContentText("Oh no! Wanna start over?");
+        gameOver.setHeaderText("Bomb Exploded!");
+        gameOver.setContentText("Oh no! Would you like to start over?");
         gameOver.showAndWait();
         reload();
     }
@@ -257,7 +257,7 @@ public class Main extends Application {
         Alert win = new Alert(AlertType.CONFIRMATION);
         win.setTitle("You won!");
         win.setHeaderText("Congratulations!");
-        win.setContentText("You found the bobms in " + seconds + " seconds.");
+        win.setContentText("You found the bombs in " + seconds + " seconds.");
         win.showAndWait();
         reload();
     }
