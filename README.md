@@ -41,7 +41,7 @@ generoi hakemistoon _target_ suoritettavan jar-tiedoston
 
 ### Checkstyle
 
-Tiedostoon [checkstyle.xml](https://github.com/ssuihko/Miinaharava/master/checkstyle.xml) määrittelemät tarkistukset suoritetaan komennolla
+Tiedostoon [checkstyle.xml](https://github.com/ssuihko/ot-harjoitustyo/blob/master/Miinaharava/checkstyle.xml) määrittelemät tarkistukset suoritetaan komennolla
 
 ```
  mvn jxr:jxr checkstyle:checkstyle
