@@ -42,5 +42,14 @@ Tiedostoon [checkstyle.xml](https://github.com/ssuihko/ot-harjoitustyo/blob/mast
 
 Mahdolliset virheilmoitukset selviävät avaamalla selaimella tiedosto _target/site/checkstyle.html_
 
+### Suoritettavan jarin generointi
+
+Komento
+
+```
+mvn package
+```
+
+generoi hakemistoon _target_ suoritettavan jar-tiedoston _Miinaharava-1.0-SNAPSHOT.jar_
 
 
