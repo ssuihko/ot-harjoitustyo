@@ -10,9 +10,9 @@ public class HighScoreComparator implements Comparator<Points> {
         int p1 = point1.getTime();
         int p2 = point2.getTime();
         
-        if(p1 > p2) {
+        if (p1 > p2) {
             return -1;
-        } else if(p1 < p2) {
+        } else if (p1 < p2) {
             return +1;
         } else {
             return 0;

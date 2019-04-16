@@ -59,7 +59,7 @@ public class HighScoreManager {
     }
 
     public void updatePointsFile() {
-        
+
         try {
             output = new ObjectOutputStream(new FileOutputStream(POINTS_FILE));
             output.writeObject(points);
@@ -79,23 +79,24 @@ public class HighScoreManager {
         }
 
     }
-    
-public String getHighScoreString() {
-    String highScore = "";
-    int max = 10;
-    
-    ArrayList<Points> points;
-    points = getPoints();
-    
-    int i = 0;
-    int x = points.size();
-    if(x > max) {
-        x = max;
+
+    public String getHighScoreString() {
+        String highScore = "";
+        int max = 10;
+
+        ArrayList<Points> points;
+        points = getPoints();
+
+        int i = 0;
+        int x = points.size();
+        
+        if (x > max) {
+            x = max;
+        }
+        while (i < x) {
+            highScore += (i + 1) + ".\t" + points.get(i).getAlias() + "\t\t" + points.get(i).getTime() + "\n";
+            i++;
+        }
+        return highScore;
     }
-    while(i < x) {
-        highScore += (i + 1) + ".\t" + points.get(i).getAlias() + "\t\t" + points.get(i).getTime() + "\n";
-        i++;  
-    }
-    return highScore;
-}
 }

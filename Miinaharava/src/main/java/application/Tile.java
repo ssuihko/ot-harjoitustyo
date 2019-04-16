@@ -38,7 +38,7 @@ public class Tile extends StackPane {
         button.setMinWidth(40);
         
         button.setOnMouseClicked(e -> {
-            Clicked(e);
+            IfClicked(e);
         });
         
         getChildren().addAll(button);
@@ -46,7 +46,7 @@ public class Tile extends StackPane {
         setTranslateX(x * 40);
         setTranslateY(y * 40);
     }
-    private void Clicked(MouseEvent event) { 
+    private void IfClicked(MouseEvent event) { 
         if (event.getButton() == MouseButton.PRIMARY) {
             if (!flagged) {
                 button.setBackground(null);
@@ -57,7 +57,7 @@ public class Tile extends StackPane {
                     Main.gameOver();
                 } else {
                     if (this.numBombs == 0) {
-                        Blank(this);
+                        IfBlank(this);
                     } else {
                         button.setText(Integer.toString(numBombs));
                         button.setTextFill(color);
@@ -84,7 +84,7 @@ public class Tile extends StackPane {
             }
         }
     }
-    private void Blank(Tile tile) {
+    private void IfBlank(Tile tile) {
         for (int i = 0; i < tile.neighbours.size(); i++) {
             if (tile.neighbours.get(i).active) {
                 tile.neighbours.get(i).button.setDisable(true);
@@ -93,7 +93,7 @@ public class Tile extends StackPane {
                 tile.neighbours.get(i).button.setTextFill(tile.neighbours.get(i).color);
                 tile.neighbours.get(i).active = false;
                 if (tile.neighbours.get(i).numBombs == 0) {
-                    Blank(tile.neighbours.get(i));
+                    IfBlank(tile.neighbours.get(i));
                 }
             }
         }

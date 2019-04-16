@@ -2,7 +2,7 @@ package domain;
 
 import java.io.Serializable;
 
-public class Alias implements Serializable{
+public class Alias implements Serializable {
 
     private String username;
 
