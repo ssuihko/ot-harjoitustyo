@@ -4,4 +4,4 @@ Alustava luokka/kansiorakenne
 
 Sekvenssikaavio
 
-<img src="https://github.com/ssuihko/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/IMG_2830.jpg" width="400" heigth="450">
+<img src="https://github.com/ssuihko/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/IMG_2830.jpg" width="500" heigth="550">
