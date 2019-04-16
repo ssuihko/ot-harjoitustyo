@@ -1,6 +1,8 @@
 package domain;
 
-public class Alias {
+import java.io.Serializable;
+
+public class Alias implements Serializable{
 
     private String username;
 
@@ -26,6 +28,12 @@ public class Alias {
         Alias other = (Alias) obj;
         return username.equals(other.username);
     }
+
+    @Override
+    public String toString() {
+        return username;
+    }
+    
 
 }
 

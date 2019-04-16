@@ -1,8 +1,8 @@
 package domain;
 
-import java.util.HashMap;
+import java.io.Serializable;
 
-public class Points {
+public class Points implements Serializable {
 
     private Alias alias;
     private int time;

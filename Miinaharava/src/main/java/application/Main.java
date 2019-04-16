@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType; 
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
@@ -32,6 +32,12 @@ import java.util.Properties;
 import java.io.FileInputStream;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import domain.HighScoreManager;
+import java.util.Optional;
+import javafx.geometry.Insets;
+import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
+import javafx.scene.layout.HBox;
 
 public class Main extends Application {
 
@@ -42,13 +48,14 @@ public class Main extends Application {
 
     private static int bombProcent = 10;
     private static int gridSize = 10;
-    private static Tile[][] grid; 
+    private static Tile[][] grid;
     public static Timer clock;
     private static VBox vbox = new VBox();
+    HighScoreManager hm = new HighScoreManager();
 
     @Override
     public void init() throws Exception {
-        
+
         Properties prop = new Properties();
         prop.load(new FileInputStream("config.properties"));
         String aliasFile = prop.getProperty("aliasFile");
@@ -80,10 +87,7 @@ public class Main extends Application {
         });
 
         stage.setTitle("Minesweeper");
-        //
-        Label Alias = new Label("Your alias: ");
-        TextField input = new TextField();
-        //
+
         MenuBar menu = new MenuBar();
 
         Menu file = new Menu("File");
@@ -130,11 +134,36 @@ public class Main extends Application {
             bombProcent = 20;
             reload();
         });
-        menuDifficulty.getItems().addAll(easy, medium, hard);
+
+        MenuItem custom = new MenuItem("Set own Percent");
+        custom.setOnAction(e -> {
+            TextField field = new TextField();
+            Button b = new Button("OK");
+
+            b.setOnAction(((event -> {
+                bombProcent = Integer.parseInt(field.getText());
+                reload();
+            })));
+
+            HBox k = new HBox();
+            k.setSpacing(20);
+            k.getChildren().addAll(field, b);
+
+            Scene n = new Scene(k);
+            Stage s = new Stage();
+            s.setScene(n);
+            s.show();
+
+        });
+
+        menuDifficulty.getItems().addAll(easy, medium, hard, custom);
 
         Menu menuAlias = new Menu("Leaderboard");
-        MenuItem me = new MenuItem("Best scores");
-        
+        MenuItem me = new MenuItem("Top 10");
+
+        //   me.setOnAction(e -> {
+        //       
+        //   });
         menuAlias.getItems().addAll(me);
 
         menu.getMenus().addAll(menuSize, menuDifficulty, menuAlias);
@@ -257,9 +286,42 @@ public class Main extends Application {
         Alert win = new Alert(AlertType.CONFIRMATION);
         win.setTitle("You won!");
         win.setHeaderText("Congratulations!");
-        win.setContentText("You found the bombs in " + seconds + " seconds.");
-        win.showAndWait();
-        reload();
+        win.setContentText("You found the bombs in " + seconds + " seconds. ");
+        // win.showAndWait();
+        Optional<ButtonType> result = win.showAndWait();
+        ButtonType button = result.orElse(ButtonType.NEXT);
+
+        if (button == ButtonType.OK) {
+            reload();
+        } else {
+            setAlias();
+            reload();
+        }
+    }
+
+    public static void setAlias() {
+        // alias functionality 
+        VBox aliasPane = new VBox(10);
+        HBox inputPane = new HBox(10);
+        Label aliasLabel = new Label("Set Alias");
+        aliasPane.setPadding(new Insets(10));
+        TextField aliasInput = new TextField();
+
+        inputPane.getChildren().addAll(aliasLabel, aliasInput);
+        Button createAlias = new Button("Set your Alias");
+
+        createAlias.setOnAction(e -> {
+            aliasInput.setText("");
+        });
+
+        aliasPane.getChildren().addAll(inputPane, createAlias);
+        Scene aliasScene = new Scene(aliasPane, 300, 250);
+
+        Stage st = new Stage();
+        st.setScene(aliasScene);
+        st.show();
+
+        // alias functionality
     }
 
     public static void main(String[] args) {
