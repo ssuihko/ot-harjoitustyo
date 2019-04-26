@@ -35,6 +35,10 @@ public class FileAliasDao implements AliasDao {
             }
         }
     }
+    /**
+     * The next three methods utilise AliasDao
+     * @return 
+     */
     @Override
     public List<Alias> getAll() {
         return aliases;

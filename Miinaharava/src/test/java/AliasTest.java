@@ -13,6 +13,10 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class AliasTest {
+    
+    /**
+     * Test checks if two different types of usernames are recognised as unequal 
+     */
 
     @Test
     public void nonEqualWhenDifferentType() {
@@ -20,13 +24,18 @@ public class AliasTest {
         Object o = new Object();
         assertFalse(a.equals(o));
     }
-
+    /**
+     * Test checks if two same usernames are recognised as equal
+     */
     @Test
     public void equalWhenSameAlias() {
         Alias aa = new Alias("aslan");
         Alias bb = new Alias("aslan");
         assertTrue(aa.equals(bb));
     }
+    /**
+     * Test checks if two different usernames are recognised as unequal
+     */
 
     @Test
     public void notEqualWhenNotSameAlias() {
@@ -34,6 +43,9 @@ public class AliasTest {
         Alias bb = new Alias("simba");
         assertFalse(aa.equals(bb));
     }
+    /**
+     * Test checks if setting the username is functional
+     */
     @Test
     public void setUserNameWorks() {
         Alias a = new Alias("newnew");

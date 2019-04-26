@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
-import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
@@ -34,6 +33,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import domain.HighScoreManager;
 import java.util.Optional;
+import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
@@ -62,6 +62,13 @@ public class Main extends Application {
 
         FileAliasDao aliasDao = new FileAliasDao(aliasFile);
     }
+    
+    /** 
+     * Method opens the initial window
+     * 
+     * @param ikkuna , 
+     * @throws Exception 
+     */
 
     @Override
     public void start(Stage ikkuna) throws Exception {
@@ -178,6 +185,9 @@ public class Main extends Application {
 
         stage.show();
     }
+    /**
+     * Method loads the game after a game over and resets the clock
+     */
 
     public static void reload() {
 
@@ -201,6 +211,10 @@ public class Main extends Application {
         stage.sizeToScene();
 
     }
+    /**
+     * Method creates the minesweeper
+     * @return 
+     */
 
     public static Parent createContent() {
 
@@ -264,7 +278,9 @@ public class Main extends Application {
         }
         return root;
     }
-
+    /**
+     * Method shows the game over screen 
+     */
     public static void gameOver() {
         for (int y = 0; y < gridSize; y++) {
             for (int x = 0; x < gridSize; x++) {
@@ -281,6 +297,9 @@ public class Main extends Application {
         gameOver.showAndWait();
         reload();
     }
+    /**
+     * 
+     */
 
     public static void win() {
         Alert win = new Alert(AlertType.CONFIRMATION);
@@ -298,6 +317,9 @@ public class Main extends Application {
             reload();
         }
     }
+    /**
+     * Method sets the alias to the received score
+     */
 
     public static void setAlias() {
         // alias functionality 

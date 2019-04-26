@@ -14,7 +14,7 @@ public class PointsTest {
     Points o = new Points(alias, 30);
     Alias nimi = new Alias("Nala");
     Points p = new Points(nimi, 25);
-
+    
     @Test
     public void addingPointsWorks() {
         o.setTime(100);

@@ -46,6 +46,10 @@ public class Tile extends StackPane {
         setTranslateX(x * 40);
         setTranslateY(y * 40);
     }
+    /**
+     * Method handles the possible processes after the player has clicked a tile
+     * @param event 
+     */
     private void IfClicked(MouseEvent event) { 
         if (event.getButton() == MouseButton.PRIMARY) {
             if (!flagged) {
@@ -84,6 +88,10 @@ public class Tile extends StackPane {
             }
         }
     }
+    /**
+     * Method blanks out the adjacent empty tiles if a click was succesfull
+     * @param tile 
+     */
     private void IfBlank(Tile tile) {
         for (int i = 0; i < tile.neighbours.size(); i++) {
             if (tile.neighbours.get(i).active) {

@@ -17,24 +17,36 @@ public class HighScoreManager {
         points = new ArrayList<Points>();
 
     }
-
+    /**
+     * Method loads and sorts the file, where scores get saved 
+     * @return 
+     */
     public ArrayList<Points> getPoints() {
         loadPointsFile();
         sort();
         return points;
     }
-
+    /**
+     * Method sorts the points in order
+     */
     private void sort() {
         HighScoreComparator comparator = new HighScoreComparator();
         Collections.sort(points, comparator);
     }
-
+    /**
+     * Method sets points to the used alias
+     * @param alias
+     * @param point 
+     */
     public void addPoints(Alias alias, int point) {
         loadPointsFile();
         points.add(new Points(alias, point));
         updatePointsFile();
 
     }
+    /**
+     * Method loads the points.file
+     */
 
     public void loadPointsFile() {
         try {
@@ -57,6 +69,9 @@ public class HighScoreManager {
             }
         }
     }
+    /**
+     * Method sets the points to the points -file
+     */
 
     public void updatePointsFile() {
 
@@ -79,6 +94,10 @@ public class HighScoreManager {
         }
 
     }
+    /**
+     * Method searches the points -file 
+     * @return returns ten highest scores
+     */
 
     public String getHighScoreString() {
         String highScore = "";

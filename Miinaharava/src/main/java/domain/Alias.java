@@ -18,6 +18,11 @@ public class Alias implements Serializable {
         return this.username = username;
         
     }
+    /**
+     * 
+     * @param obj
+     * @return 
+     */
 
     @Override
     public boolean equals(Object obj) {
