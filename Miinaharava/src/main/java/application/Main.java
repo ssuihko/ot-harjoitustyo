@@ -39,8 +39,10 @@ import java.util.logging.Logger;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 
 public class Main extends Application {
@@ -360,18 +362,25 @@ public class Main extends Application {
 
         // alias functionality
     }
-    
+    /**
+     * Method shows the top 10 screen
+     * @throws Exception 
+     */
    
     public static void top10Screen() throws Exception {
         
         Stage sc2 = new Stage();
         Pane screen = new Pane();
+        //
+        StackPane pane = new StackPane();
+        pane.setPrefSize(200, 150);
+        pane.setAlignment(Pos.CENTER);
         
         String scores = hm.getHighScoreString();
         Text text = new Text(scores);
-        screen.getChildren().add(text);
+        pane.getChildren().add(text);
         
-        Scene sc = new Scene(screen);
+        Scene sc = new Scene(pane);
         sc2.setTitle("Top 10");
         sc2.setScene(sc);
         sc2.show();
