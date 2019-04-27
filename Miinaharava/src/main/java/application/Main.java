@@ -32,8 +32,12 @@ import java.io.FileInputStream;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import domain.HighScoreManager;
+import domain.Points;
 import java.util.Optional;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
@@ -42,6 +46,7 @@ import javafx.scene.layout.HBox;
 public class Main extends Application {
 
     private static int seconds;
+    private static int winSeconds;
     static int numBombs;
     static int foundBombs;
     private static Stage stage;
@@ -51,7 +56,7 @@ public class Main extends Application {
     private static Tile[][] grid;
     public static Timer clock;
     private static VBox vbox = new VBox();
-    HighScoreManager hm = new HighScoreManager();
+    private static HighScoreManager hm = new HighScoreManager();
 
     @Override
     public void init() throws Exception {
@@ -168,9 +173,14 @@ public class Main extends Application {
         Menu menuAlias = new Menu("Leaderboard");
         MenuItem me = new MenuItem("Top 10");
 
-        //   me.setOnAction(e -> {
-        //       
-        //   });
+        me.setOnAction(e -> {
+            try {
+                top10Screen();
+            } catch (Exception ex) {
+                Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        });
+        
         menuAlias.getItems().addAll(me);
 
         menu.getMenus().addAll(menuSize, menuDifficulty, menuAlias);
@@ -301,16 +311,17 @@ public class Main extends Application {
      * 
      */
 
-    public static void win() {
+    public static void win() throws Exception {
         Alert win = new Alert(AlertType.CONFIRMATION);
         win.setTitle("You won!");
         win.setHeaderText("Congratulations!");
-        win.setContentText("You found the bombs in " + seconds + " seconds. ");
-        // win.showAndWait();
+        win.setContentText("You found the bombs in " + seconds + " seconds. Press OK to set your score");
+        //win.showAndWait();
+        winSeconds = seconds;
         Optional<ButtonType> result = win.showAndWait();
-        ButtonType button = result.orElse(ButtonType.NEXT);
+        ButtonType button = result.orElse(ButtonType.YES);
 
-        if (button == ButtonType.OK) {
+        if (button == ButtonType.CANCEL) {
             reload();
         } else {
             setAlias();
@@ -332,8 +343,11 @@ public class Main extends Application {
         inputPane.getChildren().addAll(aliasLabel, aliasInput);
         Button createAlias = new Button("Set your Alias");
 
-        createAlias.setOnAction(e -> {
+        createAlias.setOnAction((ActionEvent e) -> {
             aliasInput.setText("");
+            String a = aliasInput.getText();
+            Alias b = new Alias(a);
+            hm.addPoints(b, winSeconds);
         });
 
         aliasPane.getChildren().addAll(inputPane, createAlias);
@@ -344,6 +358,23 @@ public class Main extends Application {
         st.show();
 
         // alias functionality
+    }
+    
+   
+    public static void top10Screen() throws Exception {
+        
+        Stage sc2 = new Stage();
+        Pane screen = new Pane();
+        
+        String scores = hm.getHighScoreString();
+        Text text = new Text(scores);
+        screen.getChildren().add(text);
+        
+        Scene sc = new Scene(screen);
+        sc2.setTitle("Top 10");
+        sc2.setScene(sc);
+        sc2.show();
+        
     }
 
     public static void main(String[] args) {

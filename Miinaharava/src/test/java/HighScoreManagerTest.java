@@ -44,9 +44,9 @@ public class HighScoreManagerTest {
         // assertEquals(30, manager.getPoints().toArray());
     }
 
-    @Test
+   
     public void loadFileFunctional() {
-
+        
     }
 
     @Test
@@ -80,14 +80,27 @@ public class HighScoreManagerTest {
         String a = manager.getHighScoreString();
         assertEquals("", a.toString());
     }
+
     @Test
     public void loadFileWorks() {
         manager.loadPointsFile();
         Points point = new Points(b, 30);
         manager.points.add(point);
-     
+
+        // assertEquals()
+    }
+
+    @Test
+    public void fileNotFoundExceptionFunctional() {
+
+    }
+    @Test 
+        public void getHighScoreStringComparesCorrectly() {
+        manager.loadPointsFile();
+        Points point = new Points(b, 100);
+        Points point2 = new Points(c, 100);
         
-       // assertEquals()
+        
     }
 
 }

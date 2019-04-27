@@ -3,6 +3,8 @@ package application;
 
 import javafx.scene.paint.Color;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseButton;
@@ -38,7 +40,11 @@ public class Tile extends StackPane {
         button.setMinWidth(40);
         
         button.setOnMouseClicked(e -> {
-            IfClicked(e);
+            try {
+                IfClicked(e);
+            } catch (Exception ex) {
+                Logger.getLogger(Tile.class.getName()).log(Level.SEVERE, null, ex);
+            }
         });
         
         getChildren().addAll(button);
@@ -50,7 +56,7 @@ public class Tile extends StackPane {
      * Method handles the possible processes after the player has clicked a tile
      * @param event 
      */
-    private void IfClicked(MouseEvent event) { 
+    private void IfClicked(MouseEvent event) throws Exception { 
         if (event.getButton() == MouseButton.PRIMARY) {
             if (!flagged) {
                 button.setBackground(null);

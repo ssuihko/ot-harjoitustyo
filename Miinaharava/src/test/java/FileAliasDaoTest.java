@@ -61,6 +61,7 @@ public class FileAliasDaoTest {
         assertEquals("hellas", alias.getUsername());
 
     }
+   
     @After
     public void tearDown() {
         aliasFile.delete();
