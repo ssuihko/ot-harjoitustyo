@@ -339,15 +339,16 @@ public class Main extends Application {
         Label aliasLabel = new Label("Set Alias");
         aliasPane.setPadding(new Insets(10));
         TextField aliasInput = new TextField();
-
-        inputPane.getChildren().addAll(aliasLabel, aliasInput);
+        Label secondLabel = new Label("You won the game in " + winSeconds + " seconds");
+        
+        inputPane.getChildren().addAll(aliasLabel, aliasInput, secondLabel);
         Button createAlias = new Button("Set your Alias");
 
         createAlias.setOnAction((ActionEvent e) -> {
-            aliasInput.setText("");
             String a = aliasInput.getText();
             Alias b = new Alias(a);
-            hm.addPoints(b, winSeconds);
+            Points p = new Points(b, winSeconds);
+            hm.addPoints(p.getAlias(), p.getTime());
         });
 
         aliasPane.getChildren().addAll(inputPane, createAlias);
