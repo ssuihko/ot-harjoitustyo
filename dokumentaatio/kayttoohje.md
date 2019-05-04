@@ -15,6 +15,7 @@ java -jar todoapp.jar
 
 Sovellus on miinaharava peli. Peli avautuu automaattisesti kun sovellus käynnistetään. Peliruudun ylänurkassa näkyy kolme valikkoa Size, Difficulty ja LeaderBoard. 
 
+<img src="https://github.com/ssuihko/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/Miinaharavataulu.png">
 
 
 ## Pisteet
