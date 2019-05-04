@@ -11,4 +11,5 @@
 | 16.4  | 6    | Testit luokille HighScoreManager ja HighScoreComparator, pom.xml korjauksia, testikattavuus ja checkstyle |
 | 20.4  | 3    | HighScore -taulun kehittämistä |
 | 25.4  | 3    | HighScoretaulussa näkyy pelaajien saamat pisteet oikeassa järjestyksessä päivittyvänä top 10 listana |
-| yht   | 33   | | 
+| 4.5   | 2    | Top 10 listaan pääsemisen rajoittaminen, sovelluksen ulkonäön viilausta |
+| yht   | 35   | | 
