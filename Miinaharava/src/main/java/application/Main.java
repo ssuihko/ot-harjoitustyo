@@ -44,6 +44,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Region;
 
 public class Main extends Application {
 
@@ -156,8 +157,15 @@ public class Main extends Application {
 
             b.setOnAction(((event -> {
                 bombProcent = Integer.parseInt(field.getText());
+                if (bombProcent < 5) {
+                    Alert notUnder = new Alert(AlertType.ERROR);
+                    notUnder.setTitle("Limitation Alert");
+                    notUnder.setHeaderText("You can not set the difficulty under 5%!");
+                    notUnder.show();
+                    
+                } else {
                 reload();
-            })));
+                }})));
 
             HBox k = new HBox();
             k.setSpacing(20);
@@ -315,18 +323,20 @@ public class Main extends Application {
 
     public static void win() throws Exception {
         Alert win = new Alert(AlertType.CONFIRMATION);
+        win.getDialogPane().setMinHeight(Region.USE_PREF_SIZE);
         win.setTitle("You won!");
         win.setHeaderText("Congratulations!");
-        win.setContentText("You found the bombs in " + seconds + " seconds. Press OK to set your score");
-        //win.showAndWait();
+        win.setContentText("You found the bombs in " + seconds + " seconds. You can press OK to set your score if the bomb percentage you used was 10% or over");
         winSeconds = seconds;
         Optional<ButtonType> result = win.showAndWait();
         ButtonType button = result.orElse(ButtonType.YES);
 
         if (button == ButtonType.CANCEL) {
             reload();
-        } else {
+        } else if (bombProcent > 9){
             setAlias();
+            reload();
+        } else {
             reload();
         }
     }
@@ -341,9 +351,8 @@ public class Main extends Application {
         Label aliasLabel = new Label("Set Alias");
         aliasPane.setPadding(new Insets(10));
         TextField aliasInput = new TextField();
-        Label secondLabel = new Label("You won the game in " + winSeconds + " seconds");
-        
-        inputPane.getChildren().addAll(aliasLabel, aliasInput, secondLabel);
+       
+        inputPane.getChildren().addAll(aliasLabel, aliasInput);
         Button createAlias = new Button("Set your Alias");
 
         createAlias.setOnAction((ActionEvent e) -> {
@@ -351,6 +360,11 @@ public class Main extends Application {
             Alias b = new Alias(a);
             Points p = new Points(b, winSeconds);
             hm.addPoints(p.getAlias(), p.getTime());
+            try {
+                top10Screen();
+            } catch (Exception ex) {
+                Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+            }
         });
 
         aliasPane.getChildren().addAll(inputPane, createAlias);
