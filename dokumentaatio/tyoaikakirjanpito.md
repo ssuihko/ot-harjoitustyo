@@ -9,4 +9,6 @@
 | 9.4   | 7    | pom.xml korjattu, testit kaikille luokille, checkstyle asennettu |
 | 15.4  | 2    | HighScoreManager ja HighScoreComparator luotu |
 | 16.4  | 6    | Testit luokille HighScoreManager ja HighScoreComparator, pom.xml korjauksia, testikattavuus ja checkstyle |
-| yht   | 27   | | 
+| 20.4  | 3    | HighScore -taulun kehittämistä |
+| 25.4  | 3    | HighScoretaulussa näkyy pelaajien saamat pisteet oikeassa järjestyksessä päivittyvänä top 10 listana |
+| yht   | 33   | | 
