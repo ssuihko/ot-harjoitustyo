@@ -168,11 +168,13 @@ public class Main extends Application {
                 }})));
 
             HBox k = new HBox();
+            
             k.setSpacing(20);
             k.getChildren().addAll(field, b);
 
             Scene n = new Scene(k);
             Stage s = new Stage();
+            s.setTitle("Set Percentage");
             s.setScene(n);
             s.show();
 
@@ -318,7 +320,7 @@ public class Main extends Application {
         reload();
     }
     /**
-     * 
+     * Method shows the You won -alert
      */
 
     public static void win() throws Exception {
