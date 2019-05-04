@@ -13,7 +13,9 @@ java -jar todoapp.jar
 
 ## Peli
 
-Sovellus on miinaharava peli
+Sovellus on miinaharava peli. Peli avautuu automaattisesti kun sovellus käynnistetään. Peliruudun ylänurkassa näkyy kolme valikkoa Size, Difficulty ja LeaderBoard. 
+
+
 
 ## Pisteet
 
