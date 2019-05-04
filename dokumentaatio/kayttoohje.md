@@ -26,7 +26,7 @@ Voittaessaan pelaaja voi asettaa itselleen aliaksen ja nähdä, pääsikö hän 
 
 <img src="https://github.com/ssuihko/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/youwon.png">
 
-<img rrc="https://github.com/ssuihko/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/setalias.png">
+<img src="https://github.com/ssuihko/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/setalias.png">
 
 
 
