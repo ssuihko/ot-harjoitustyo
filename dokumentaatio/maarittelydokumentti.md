@@ -8,12 +8,11 @@ Sovellus on miinaharavapeli, johon integroidaan pelin lisäksi pelaajien highsco
 - pelaaja voi avata miinaharava -sovelluksen
 - pelaaja voi luoda itselleen peli-aliaksen
 - pelaaja voi nähdä miinaharava -taulun
-- pelaaja voi pelata miinaharavaa ja nähdä pisteensä pelin päätyttyä
-- pisteet perustuvat kuluneeseen aikaan, kentän kokoon ja miinojen määrään
-- pelaaja voi nähdä oman sijoituksensa highscore -taulun lisäksi, jos hän ei päässyt top 5
+- pelaaja voi pelata miinaharavaa ja nähdä pelin suoritusajan onnistuneen pelin päätyttyä
+- pisteet perustuvat kuluneeseen aikaan
+- pelaaja voi nähdä oman sijoituksensa highscore -taulussa, jos hän pääsi 10 parhaan joukkoon
 - pelaaja voi lopettaa pelin 
 - pelaaja voi aloittaa uuden pelin
+- pelaaja voi valita itselleen vaikeusasteen sekä kentän koon että miinojen määrän perusteella
+- pelaaja voi kustomoida miinojen määrää
 
-## Jatkokehitysideoita
-- pelaaja voi valita vaikeusasteen 10, 40 ja 99 miinan välillä
-- pelaaja voi kustomoida itselleen miinaharavakentän
