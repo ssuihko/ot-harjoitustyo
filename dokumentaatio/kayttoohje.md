@@ -24,8 +24,6 @@ Valikosta Difficulty pelaaja voi valita asteiden Easy (10%), Medium (15%), Hard 
 
 Voittaessaan pelaaja voi asettaa itselleen aliaksen ja nähdä, pääsikö hän 10 parhaan joukkoon suorituksellaan, mutta vain jos hän on voittanut pelissä yli 20% vaikeusasteella.
 
-<img src="https://github.com/ssuihko/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/youwon.png">
-
 <img src="https://github.com/ssuihko/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/setalias.png">
 
 Sekä aliaksen annettuaan että näytön leaderboard valikosta pelaaja voi nähdä tämänhetkisen highscore -listauksen top 10 napista painamalla. Listauksessa näkyvät pelaajan antama alias sekä se aika, jolla hän on voittanut pelin. Kuten aiemmin mainittu, listaukseen voi päästä vain, jos on pelannut yli 20% vaikeusasteella. 
