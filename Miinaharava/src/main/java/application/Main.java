@@ -328,14 +328,14 @@ public class Main extends Application {
         win.getDialogPane().setMinHeight(Region.USE_PREF_SIZE);
         win.setTitle("You won!");
         win.setHeaderText("Congratulations!");
-        win.setContentText("You found the bombs in " + seconds + " seconds. You can press OK to set your score if the bomb percentage you used was 10% or over");
+        win.setContentText("You found the bombs in " + seconds + " seconds. You can press OK to set your score if the bomb percentage you used was 20% or over");
         winSeconds = seconds;
         Optional<ButtonType> result = win.showAndWait();
         ButtonType button = result.orElse(ButtonType.YES);
 
         if (button == ButtonType.CANCEL) {
             reload();
-        } else if (bombProcent > 9){
+        } else if (bombProcent > 19) {
             setAlias();
             reload();
         } else {
