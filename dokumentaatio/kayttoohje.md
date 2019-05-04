@@ -28,9 +28,4 @@ Voittaessaan pelaaja voi asettaa itselleen aliaksen ja nähdä, pääsikö hän 
 
 <img src="https://github.com/ssuihko/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/setalias.png">
 
-
-
-## Pisteet
-
-Pelattuaan käyttäjän on mahdollista kirjata pisteensä highscore -tauluun
-
+Sekä aliaksen annettuaan että näytön leaderboard valikosta pelaaja voi nähdä tämänhetkisen highscore -listauksen top 10 napista painamalla. 
