@@ -17,6 +17,8 @@ Sovellus on miinaharava peli. Peli avautuu automaattisesti kun sovellus käynnis
 
 <img src="https://github.com/ssuihko/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/Miinaharavataulu.png">
 
+Napista Size pelaaja voi säätää kentän kokoa. 
+
 
 ## Pisteet
 
