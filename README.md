@@ -13,6 +13,8 @@ Sovellus on miinaharavapeli. Sovellus ei vaadi varsinaista rekisteröitymistä, 
 
 [käyttöohje](https://github.com/ssuihko/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
 
+[testaustiedosto](https://github.com/ssuihko/ot-harjoitustyo/blob/master/dokumentaatio/testaus.md)
+
 ## Releaset
 
 [viikko 5](https://github.com/ssuihko/ot-harjoitustyo/releases)
