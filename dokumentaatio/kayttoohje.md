@@ -24,6 +24,9 @@ Valikosta Difficulty pelaaja voi valita asteiden Easy (10%), Medium (15%), Hard 
 
 Voittaessaan pelaaja voi asettaa itselleen aliaksen ja nähdä, pääsikö hän 10 parhaan joukkoon suorituksellaan, mutta vain jos hän on voittanut pelissä yli 10% vaikeusasteella.
 
+<img src="https://github.com/ssuihko/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/youwon.png">
+
+<img rrc="https://github.com/ssuihko/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/setalias.png">
 
 
 
