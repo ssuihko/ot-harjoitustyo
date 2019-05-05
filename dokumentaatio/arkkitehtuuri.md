@@ -22,7 +22,7 @@ Ohjelman osien suhdetta kuvaava luokka/pakkauskaavio:
 
 ## Päätoiminnallisuudet
 
-Alla kaavio:
+Alla kaavio pelaajien tietojen tallentamisesta HighScoreManagerin, Aliaksen ja  
 
 <img src="https://github.com/ssuihko/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/IMG_2830.jpg" width="500" heigth="550">
 
