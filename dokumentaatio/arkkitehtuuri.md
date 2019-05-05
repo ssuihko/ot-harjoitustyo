@@ -28,8 +28,9 @@ Sekvenssikaavio pelaajien tietojen tallentamisesta HighScoreManager, Alias ja Po
 
 <img src="https://github.com/ssuihko/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/IMG_2830.jpg" width="500" heigth="550">
 
-Uuden highScoren listaus tiedostoon:
+Uuden highScoren listaus tiedostoon ja highScore listauksen avaaminen:
 
+<img src="https://github.com/ssuihko/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/sekvenssikaav.png">
 
 
 ## Pysyväistallennus ja Tiedostot
