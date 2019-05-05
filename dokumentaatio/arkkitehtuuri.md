@@ -20,3 +20,13 @@ Sovelluksen perustoiminnallisuuden muodostavat luokat [Main](https://github.com/
 
 Dataa käsittelevät luokat ovat [Alias](https://github.com/ssuihko/ot-harjoitustyo/blob/master/Miinaharava/src/main/java/domain/Alias.java), [Points](https://github.com/ssuihko/ot-harjoitustyo/blob/master/Miinaharava/src/main/java/domain/Points.java), ja points.txt -tiedostoon tallennettuja pisteitä käsittelevät luokat [HighScoreComparator](https://github.com/ssuihko/ot-harjoitustyo/blob/master/Miinaharava/src/main/java/domain/HighScoreComparator.java) ja [HighScoreManager](https://github.com/ssuihko/ot-harjoitustyo/blob/master/Miinaharava/src/main/java/domain/HighScoreManager.java). 
 
+## Päätoiminnallisuudet
+
+## Tiedostot
+
+Sovellus tallentaa käyttäjien aliaksia ja pisteitä tiedostoon points.txt luokkien HighScoreComparator ja HighScoreManager avulla.
+
+## Ohjelman rakenteeseen jääneet puutteet
+
+
+
