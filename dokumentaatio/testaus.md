@@ -15,3 +15,5 @@ Testauksen rivikattavuus on 68% ja haaraumakattavuus 83%.
 ### Sovellukseen jääneet ongelmat
 
 Sovellus ei testaa kovin kattavasti luokan [HighScoreManager](https://github.com/ssuihko/ot-harjoitustyo/blob/master/Miinaharava/src/test/java/domain/HighScoreManagerTest.java) toimintaa. 
+
+Top 10 listaan ei voi päästä käyttäjäaliaksella, joka on yli 30 kirjainta pitkä, mutta aliaksen voi antaa tyhjänä.
