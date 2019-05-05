@@ -32,7 +32,7 @@ Uuden highScoren listaus tiedostoon ja highScore listauksen avaaminen:
 
 <img src="https://github.com/ssuihko/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/sekvenssikaav.png">
 
-Ohjelman keskeisin toiminnallisuus, miinaharavapeli, on toteutettu [application.main]((https://github.com/ssuihko/ot-harjoitustyo/blob/master/Miinaharava/src/main/java/application/Main.java) ja [application.tile](https://github.com/ssuihko/ot-harjoitustyo/blob/master/Miinaharava/src/main/java/application/Tile.java) luokkien avulla.
+Ohjelman keskeisin toiminnallisuus, miinaharavapeli, on toteutettu [application.main](https://github.com/ssuihko/ot-harjoitustyo/blob/master/Miinaharava/src/main/java/application/Main.java) ja [application.tile](https://github.com/ssuihko/ot-harjoitustyo/blob/master/Miinaharava/src/main/java/application/Tile.java) luokkien avulla.
 
 ## Pysyväistallennus ja Tiedostot
 
