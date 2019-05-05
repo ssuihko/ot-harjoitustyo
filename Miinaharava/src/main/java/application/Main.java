@@ -27,6 +27,7 @@ import javafx.scene.text.Text;
 import dao.AliasDao;
 import domain.Alias;
 import dao.FileAliasDao;
+import dao.AliasDao;
 import java.util.Properties;
 import java.io.FileInputStream;
 import javafx.scene.control.Label;
@@ -69,15 +70,15 @@ public class Main extends Application {
         String aliasFile = prop.getProperty("aliasFile");
 
         FileAliasDao aliasDao = new FileAliasDao(aliasFile);
-    }
-    
-    /** 
-     * Method opens the initial window
-     * 
-     * @param ikkuna , 
-     * @throws Exception 
-     */
 
+    }
+
+    /**
+     * Method opens the initial window
+     *
+     * @param ikkuna ,
+     * @throws Exception
+     */
     @Override
     public void start(Stage ikkuna) throws Exception {
 
@@ -104,15 +105,6 @@ public class Main extends Application {
         stage.setTitle("Minesweeper");
 
         MenuBar menu = new MenuBar();
-
-        Menu file = new Menu("File");
-
-        MenuItem quit = new MenuItem("Quit");
-        quit.setOnAction(e -> {
-            Platform.exit();
-        });
-
-        file.getItems().addAll(quit);
 
         Menu menuSize = new Menu("Size");
         MenuItem ten = new MenuItem("10x10");
@@ -162,13 +154,14 @@ public class Main extends Application {
                     notUnder.setTitle("Limitation Alert");
                     notUnder.setHeaderText("You can not set the difficulty under 5%!");
                     notUnder.show();
-                    
+
                 } else {
-                reload();
-                }})));
+                    reload();
+                }
+            })));
 
             HBox k = new HBox();
-            
+
             k.setSpacing(20);
             k.getChildren().addAll(field, b);
 
@@ -192,7 +185,7 @@ public class Main extends Application {
                 Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
             }
         });
-        
+
         menuAlias.getItems().addAll(me);
 
         menu.getMenus().addAll(menuSize, menuDifficulty, menuAlias);
@@ -207,10 +200,10 @@ public class Main extends Application {
 
         stage.show();
     }
+
     /**
      * Method loads the game after a game over and resets the clock
      */
-
     public static void reload() {
 
         grid = new Tile[gridSize][gridSize];
@@ -233,11 +226,12 @@ public class Main extends Application {
         stage.sizeToScene();
 
     }
+
     /**
      * Method creates the minesweeper
-     * @return 
+     *
+     * @return
      */
-
     public static Parent createContent() {
 
         Pane root = new Pane();
@@ -300,8 +294,9 @@ public class Main extends Application {
         }
         return root;
     }
+
     /**
-     * Method shows the game over screen 
+     * Method shows the game over screen
      */
     public static void gameOver() {
         for (int y = 0; y < gridSize; y++) {
@@ -319,10 +314,10 @@ public class Main extends Application {
         gameOver.showAndWait();
         reload();
     }
+
     /**
      * Method shows the You won -alert
      */
-
     public static void win() throws Exception {
         Alert win = new Alert(AlertType.CONFIRMATION);
         win.getDialogPane().setMinHeight(Region.USE_PREF_SIZE);
@@ -342,30 +337,43 @@ public class Main extends Application {
             reload();
         }
     }
+
     /**
      * Method sets the alias to the received score
      */
-
     public static void setAlias() {
         // alias functionality 
+
         VBox aliasPane = new VBox(10);
         HBox inputPane = new HBox(10);
         Label aliasLabel = new Label("Set Alias");
         aliasPane.setPadding(new Insets(10));
         TextField aliasInput = new TextField();
-       
+
         inputPane.getChildren().addAll(aliasLabel, aliasInput);
         Button createAlias = new Button("Set your Alias");
 
         createAlias.setOnAction((ActionEvent e) -> {
             String a = aliasInput.getText();
-            Alias b = new Alias(a);
-            Points p = new Points(b, winSeconds);
-            hm.addPoints(p.getAlias(), p.getTime());
-            try {
-                top10Screen();
-            } catch (Exception ex) {
-                Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+
+            if (a.length() > 50) {
+                Alert toolong = new Alert(AlertType.ERROR);
+                toolong.getDialogPane().setMinHeight(Region.USE_PREF_SIZE);
+                toolong.setTitle("Alias too long!");
+                toolong.setContentText("Your alias can be 30 letters long at most!");
+                toolong.show();
+            } else if (a.length() <= 30) {
+                Alias b = new Alias(a);
+                
+                Points p = new Points(b, winSeconds);
+                hm.addPoints(p.getAlias(), p.getTime());
+                
+                
+                try {
+                    top10Screen();
+                } catch (Exception ex) {
+                    Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
 
@@ -378,29 +386,32 @@ public class Main extends Application {
 
         // alias functionality
     }
+
+
     /**
      * Method shows the top 10 screen
-     * @throws Exception 
+     *
+     * @throws Exception
      */
-   
+
     public static void top10Screen() throws Exception {
-        
+
         Stage sc2 = new Stage();
         Pane screen = new Pane();
         //
         StackPane pane = new StackPane();
         pane.setPrefSize(200, 150);
         pane.setAlignment(Pos.CENTER);
-        
+
         String scores = hm.getHighScoreString();
         Text text = new Text(scores);
         pane.getChildren().add(text);
-        
+
         Scene sc = new Scene(pane);
         sc2.setTitle("Top 10");
         sc2.setScene(sc);
         sc2.show();
-        
+
     }
 
     public static void main(String[] args) {

@@ -53,11 +53,11 @@ public class HighScoreManager {
             input = new ObjectInputStream(new FileInputStream(POINTS_FILE));
             points = (ArrayList<Points>) input.readObject();
         } catch (FileNotFoundException e) {
-            System.out.println("[LOAD] Load Error: " + e.getMessage());
+            System.out.println("Load Error: " + e.getMessage());
         } catch (IOException e) {
-            System.out.println("[LOAD] IO Error: " + e.getMessage());
+            System.out.println("IO Error: " + e.getMessage());
         } catch (ClassNotFoundException e) {
-            System.out.println("[LOAD] CNF Error: " + e.getMessage());
+            System.out.println("CNF Error: " + e.getMessage());
         } finally {
             try {
                 if (output != null) {
@@ -65,7 +65,7 @@ public class HighScoreManager {
                     output.close();
                 }
             } catch (IOException e) {
-                System.out.println("[LOAD] IO Error: " + e.getMessage());
+                System.out.println("IO Error: " + e.getMessage());
             }
         }
     }
@@ -79,9 +79,9 @@ public class HighScoreManager {
             output = new ObjectOutputStream(new FileOutputStream(POINTS_FILE));
             output.writeObject(points);
         } catch (FileNotFoundException e) {
-            System.out.println("[Update] FNF Error: " + e.getMessage() + ",the program will try and make a new file");
+            System.out.println("Error: " + e.getMessage() + ",the program will try and make a new file");
         } catch (IOException e) {
-            System.out.println("[Update] IO Error: " + e.getMessage());
+            System.out.println("IO Error: " + e.getMessage());
         } finally {
             try {
                 if (output != null) {
@@ -89,7 +89,7 @@ public class HighScoreManager {
                     output.close();
                 }
             } catch (IOException e) {
-                System.out.println("[Update] Error: " + e.getMessage());
+                System.out.println("Error: " + e.getMessage());
             }
         }
 

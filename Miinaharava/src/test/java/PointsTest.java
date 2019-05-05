@@ -15,17 +15,27 @@ public class PointsTest {
     Alias nimi = new Alias("Nala");
     Points p = new Points(nimi, 25);
     
+    /**
+     * Tests if the setTime method is functional
+     */
+    
     @Test
     public void addingPointsWorks() {
         o.setTime(100);
         assertEquals(100, o.getTime());
 
     }
+    /**
+     * Tests if the getTime function is functional
+     */
     @Test
     public void addingPointsIfFalse() {
         o.setTime(19);
         assertFalse(o.getTime() != 19);
     }
+    /**
+     * Tests if different aliases are seen as different
+     */
     @Test
     public void sameAliasFalse() {
         assertFalse(o.getAlias().equals(p.getAlias()));

@@ -5,7 +5,6 @@ import javafx.scene.paint.Color;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
@@ -27,6 +26,13 @@ public class Tile extends StackPane {
     
     boolean active = true;
     
+    /**
+     * Method handles the Tiles
+     * @param x
+     * @param y
+     * @param hasBomb 
+     */
+    
     public Tile(int x, int y, boolean hasBomb) {
         this.x = x;
         this.y = y;
@@ -41,7 +47,7 @@ public class Tile extends StackPane {
         
         button.setOnMouseClicked(e -> {
             try {
-                IfClicked(e);
+                clicked(e);
             } catch (Exception ex) {
                 Logger.getLogger(Tile.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -56,7 +62,7 @@ public class Tile extends StackPane {
      * Method handles the possible processes after the player has clicked a tile
      * @param event 
      */
-    private void IfClicked(MouseEvent event) throws Exception { 
+    private void clicked(MouseEvent event) throws Exception { 
         if (event.getButton() == MouseButton.PRIMARY) {
             if (!flagged) {
                 button.setBackground(null);
@@ -67,7 +73,7 @@ public class Tile extends StackPane {
                     Main.gameOver();
                 } else {
                     if (this.numBombs == 0) {
-                        IfBlank(this);
+                        blank(this);
                     } else {
                         button.setText(Integer.toString(numBombs));
                         button.setTextFill(color);
@@ -95,10 +101,10 @@ public class Tile extends StackPane {
         }
     }
     /**
-     * Method blanks out the adjacent empty tiles if a click was succesfull
+     * Method blanks out the adjacent empty tiles if a click was successful
      * @param tile 
      */
-    private void IfBlank(Tile tile) {
+    private void blank(Tile tile) {
         for (int i = 0; i < tile.neighbours.size(); i++) {
             if (tile.neighbours.get(i).active) {
                 tile.neighbours.get(i).button.setDisable(true);
@@ -107,7 +113,7 @@ public class Tile extends StackPane {
                 tile.neighbours.get(i).button.setTextFill(tile.neighbours.get(i).color);
                 tile.neighbours.get(i).active = false;
                 if (tile.neighbours.get(i).numBombs == 0) {
-                    IfBlank(tile.neighbours.get(i));
+                    blank(tile.neighbours.get(i));
                 }
             }
         }

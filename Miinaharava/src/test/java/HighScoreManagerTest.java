@@ -29,42 +29,11 @@ public class HighScoreManagerTest {
     ObjectInputStream input = null;
     public Alias b = new Alias("Bert");
     public Alias c = new Alias("Celine");
-
-    @Test
-    public void sortFunctional() {
-
-    }
-
-    @Test
-    public void getPointsFunctional() {
-
-        Alias ada = new Alias("ada");
-        manager.addPoints(ada, 30);
-
-        // assertEquals(30, manager.getPoints().toArray());
-    }
-
-   
-    public void loadFileFunctional() {
-        
-    }
-
-    @Test
-    public void updateFileFunctional() {
-
-    }
-
-    @Test(expected = FileNotFoundException.class)
-    public void notFound() throws Exception {
-        input = new ObjectInputStream(new FileInputStream(""));
-
-    }
-
-    @Test
-    public void outputFlushandClose() {
-
-    }
-
+    
+    
+    /**
+     * Test sees if the updateFile method is functional
+     */
     @Test
     public void updateFileWorks() {
         // Points o = new Points(b, 20);
@@ -80,6 +49,9 @@ public class HighScoreManagerTest {
         String a = manager.getHighScoreString();
         assertEquals("", a.toString());
     }
+    /**
+     * Tests the loadFile method
+     */
 
     @Test
     public void loadFileWorks() {
@@ -89,19 +61,5 @@ public class HighScoreManagerTest {
 
         // assertEquals()
     }
-
-    @Test
-    public void fileNotFoundExceptionFunctional() {
-
-    }
-    @Test 
-        public void getHighScoreStringComparesCorrectly() {
-        manager.loadPointsFile();
-        Points point = new Points(b, 100);
-        Points point2 = new Points(c, 100);
-        
-        
-    }
-
+    
 }
-//expected:<1.[ Celine 70 2. Bert 20 ]> but was:<1.[ Celine  70 2. Bert  20 ]>
