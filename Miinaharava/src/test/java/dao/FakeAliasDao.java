@@ -1,3 +1,5 @@
+package dao;
+
 
 import domain.Alias;
 import org.junit.After;
