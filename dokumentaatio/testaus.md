@@ -1,9 +1,12 @@
-## Testausdokumentti
+# Testausdokumentti
+
+## Yksikkö - ja integraatiotestaus
 
 ### Sovelluslogiikka
 
 Pakkauksen [dao](https://github.com/ssuihko/ot-harjoitustyo/tree/master/Miinaharava/src/main/java/dao) luokkia testaavat testit [FakeAliasDao](https://github.com/ssuihko/ot-harjoitustyo/blob/master/Miinaharava/src/test/java/dao/FakeAliasDao.java) ja [FileAliasDaoTest](https://github.com/ssuihko/ot-harjoitustyo/blob/master/Miinaharava/src/test/java/dao/FileAliasDaoTest.java). 
 Pakkauksen [domain](https://github.com/ssuihko/ot-harjoitustyo/tree/master/Miinaharava/src/main/java/domain) luokkia testaavat  [AliasTest](https://github.com/ssuihko/ot-harjoitustyo/blob/master/Miinaharava/src/test/java/domain/AliasTest.java), [HighScoreComparatorTest](https://github.com/ssuihko/ot-harjoitustyo/blob/master/Miinaharava/src/test/java/domain/HighScoreComparatorTest.java), [HighScoreManagerTest](https://github.com/ssuihko/ot-harjoitustyo/blob/master/Miinaharava/src/test/java/domain/HighScoreManagerTest.java) sekä [PointsTest](https://github.com/ssuihko/ot-harjoitustyo/blob/master/Miinaharava/src/test/java/domain/PointsTest.java). 
+Pakkauksen [application](https://github.com/ssuihko/ot-harjoitustyo/tree/master/Miinaharava/src/main/java/application) luokille ei ole tehty testejä.
 
 
 ### Testikattavuus
