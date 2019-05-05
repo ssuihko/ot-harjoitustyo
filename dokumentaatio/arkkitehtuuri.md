@@ -22,7 +22,9 @@ Dataa käsittelevät luokat ovat [Alias](https://github.com/ssuihko/ot-harjoitus
 
 ## Päätoiminnallisuudet
 
-## Tiedostot
+## Pysyväistallennus ja Tiedostot
+
+Luokkien AliasDao ja FileAliasDao työnä on tallentaa käyttäjien aliaksia tiedostoon. Sovelluksen juuressa on tiedosto congig:properties, joka osoittaa tiedoston nimen.  
 
 Sovellus tallentaa käyttäjien aliaksia ja pisteitä tiedostoon points.txt luokkien HighScoreComparator ja HighScoreManager avulla.
 
