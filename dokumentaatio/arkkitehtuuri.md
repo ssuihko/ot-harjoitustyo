@@ -1,5 +1,7 @@
 ## Kansiorakenne
 
+Kansiorakenne on kolmikerroksinen. Kansioon application sisältyvät kaikki Miinaharavapelin käyttöliittymän, kansiossa domain on sekä pysyväistallennukseen että sovelluslogiikkaan liittyvää koodia. Pakkauksessa dao on taas vain aliasten pysyväistallennukseen liittyvää koodia.
+
 <img src="https://github.com/ssuihko/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/kansiot.png">
 
 ## Sekvenssikaavio
