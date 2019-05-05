@@ -16,17 +16,31 @@ Sovelluksen perustoiminnallisuuden muodostavat luokat [Main](https://github.com/
 
 Dataa käsittelevät luokat ovat [Alias](https://github.com/ssuihko/ot-harjoitustyo/blob/master/Miinaharava/src/main/java/domain/Alias.java), [Points](https://github.com/ssuihko/ot-harjoitustyo/blob/master/Miinaharava/src/main/java/domain/Points.java), ja points.txt -tiedostoon tallennettuja pisteitä käsittelevät luokat [HighScoreComparator](https://github.com/ssuihko/ot-harjoitustyo/blob/master/Miinaharava/src/main/java/domain/HighScoreComparator.java) ja [HighScoreManager](https://github.com/ssuihko/ot-harjoitustyo/blob/master/Miinaharava/src/main/java/domain/HighScoreManager.java). 
 
-<img src="https://github.com/ssuihko/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/IMG_2830.jpg" width="500" heigth="550">
+Ohjelman osien suhdetta kuvaava luokka/pakkauskaavio:
+
+<img src="https://github.com/ssuihko/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/LuokkaPakkaus.png">
 
 ## Päätoiminnallisuudet
 
+Muutama sovelluksen perusominaisuus kuvattuna sekvenssikaavioina:
+
+Sekvenssikaavio pelaajien tietojen tallentamisesta HighScoreManager, Alias ja Points -luokan toteuttamana kokonaisuutena: 
+
+<img src="https://github.com/ssuihko/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/IMG_2830.jpg" width="500" heigth="550">
+
+Uuden highScoren listaus tiedostoon:
+
+
+
 ## Pysyväistallennus ja Tiedostot
 
-Luokkien AliasDao ja FileAliasDao työnä on tallentaa käyttäjien aliaksia tiedostoon. Sovelluksen juuressa on tiedosto congig:properties, joka osoittaa tiedoston nimen.  
+Luokkien AliasDao ja FileAliasDao työnä on tallentaa käyttäjien aliaksia tiedostoon. Sovelluksen juuressa on tiedosto config:properties, joka osoittaa tiedoston nimen.  
 
 Sovellus tallentaa käyttäjien aliaksia ja pisteitä tiedostoon points.txt luokkien HighScoreComparator ja HighScoreManager avulla.
 
-## Ohjelman rakenteeseen jääneet puutteet
+## Ohjelmaan jääneet puutteet
+
+Tällä hetkellä points.txt tiedostoon tallentuu tietoa, mutta sen pysyvyydessä on ilmentynyt joitain satunnaisia puutteita. Myös AliasDao ja AliasFileDao eivät ole ḱunnolla käytössä. 
 
 
 
