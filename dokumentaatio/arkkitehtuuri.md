@@ -20,11 +20,11 @@ Ohjelman osien suhdetta kuvaava luokka/pakkauskaavio:
 
 <img src="https://github.com/ssuihko/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/LuokkaPakkaus.png">
 
-Toiminnallisuutta kuvaava sekvenssikaavio:
+## Päätoiminnallisuudet
+
+Alla kaavio:
 
 <img src="https://github.com/ssuihko/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/IMG_2830.jpg" width="500" heigth="550">
-
-## Päätoiminnallisuudet
 
 ## Pysyväistallennus ja Tiedostot
 
