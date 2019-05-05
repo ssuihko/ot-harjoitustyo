@@ -28,13 +28,19 @@ Sekvenssikaavio pelaajien tietojen tallentamisesta HighScoreManager, Alias ja Po
 
 <img src="https://github.com/ssuihko/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/IMG_2830.jpg" width="500" heigth="550">
 
+Uuden highScoren listaus tiedostoon:
+
+
+
 ## Pysyväistallennus ja Tiedostot
 
-Luokkien AliasDao ja FileAliasDao työnä on tallentaa käyttäjien aliaksia tiedostoon. Sovelluksen juuressa on tiedosto congig:properties, joka osoittaa tiedoston nimen.  
+Luokkien AliasDao ja FileAliasDao työnä on tallentaa käyttäjien aliaksia tiedostoon. Sovelluksen juuressa on tiedosto config:properties, joka osoittaa tiedoston nimen.  
 
 Sovellus tallentaa käyttäjien aliaksia ja pisteitä tiedostoon points.txt luokkien HighScoreComparator ja HighScoreManager avulla.
 
-## Ohjelman rakenteeseen jääneet puutteet
+## Ohjelmaan jääneet puutteet
+
+Tällä hetkellä points.txt tiedostoon tallentuu tietoa, mutta sen pysyvyydessä on ilmentynyt joitain satunnaisia puutteita. Myös AliasDao ja AliasFileDao eivät ole ḱunnolla käytössä. 
 
 
 
