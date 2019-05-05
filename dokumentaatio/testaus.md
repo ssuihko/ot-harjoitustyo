@@ -8,7 +8,8 @@ Pakkauksen [domain](https://github.com/ssuihko/ot-harjoitustyo/tree/master/Miina
 
 ### Testikattavuus
 
-Testauksen 
+Testauksen rivikattavuus on 68% ja haaraumakattavuus 86%.
+
 <img src="https://github.com/ssuihko/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/testikat.png">
 
 ### Sovellukseen jääneet ongelmat
